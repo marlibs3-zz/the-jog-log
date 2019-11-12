@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d14d1899-5904-4c2c-96af-7ee23a238719" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fitnessapps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fitnessapps.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitnessapps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitnessapps/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitnessapps/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitnessapps/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thejoglog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/thejoglog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thejoglog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/thejoglog/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
