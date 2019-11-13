@@ -1,0 +1,42 @@
+{% load calculations %}
+{% load static %}
+
+<!DOCTYPE html>
+<html style="background: url({% static 'images/background.jpg' %}) no-repeat center center fixed; background-size: cover;">
+  <head>
+    <meta charset="utf-8">
+    <title>The Jog Log</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body style="background-color: transparent !important">
+    <div class="container">
+      <ol class="breadcrumb my-4" style="background-color: transparent;">
+        <a style="color: inherit; text-decoration: none;" href="/">
+          <li style="font-size: xx-large;">My Runs</li>
+        </a>
+      </ol>
+      {% block content %}
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="id_date">Date</label>
+            <input type="date" class="form-control" id="id_date" name="date">
+          </div>
+          <div class="form-group">
+            <label for="id_distance">Distance ran (in km)</label>
+            <input type="number" class="form-control" id="id_distance" name="distance">
+          </div>
+          <div class="form-group">
+            <label for="id_time">Time taken (in minutes)</label>
+            <input type="number" class="form-control" id="id_time" name="time">
+          </div>
+          <div class="form-group">
+            <label for="id_weight">Weight (in kg)</label>
+            <input type="number" class="form-control" id="id_weight" name="weight">
+          </div>
+          <button type="submit" class="btn btn-success">Post</button>
+        </form>
+      {% endblock %}
+      </div>
+  </body>
+</html>
