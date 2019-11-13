@@ -2,7 +2,6 @@ from django.urls import reverse
 from django.urls import resolve
 from django.test import TestCase
 from .views import home
-from .views import new_log
 from .models import Log
 
 
@@ -26,14 +25,14 @@ class NewLogTests(TestCase):
         response = self.client.get(url)
         self.assertContains(response, 'csrfmiddlewaretoken')
 
-    def test_new_topic_valid_post_data(self):
-        url = reverse('new_topic', kwargs={'pk': 1})
+    def test_new_log_valid_post_data(self):
+        url = reverse('new_log')
         data = {
             'date': '2019-11-01',
             'distance': 4.9,
             'time': 22,
             'weight': 80,
         }
-        response = self.client.post(url, data)
-        self.assertTrue(Topic.objects.exists())
-        self.assertTrue(Post.objects.exists())
+        self.client.post(url, data)
+        self.assertTrue(Log.objects.exists())
+
