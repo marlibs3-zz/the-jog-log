@@ -1,16 +1,20 @@
 {% load calculations %}
+{% load static %}
 
 <!DOCTYPE html>
-<html>
+<html style="background: url({% static 'images/background-wide.jpg' %}) no-repeat center center fixed; background-size: cover;">
   <head>
     <meta charset="utf-8">
     <title>The Jog Log</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   </head>
-  <body>
-    <h1>My Runs</h1>
-
-    <table border="1">
-      <thead>
+  <body style="background-color: transparent !important">
+    <div class="container">
+      <ol class="breadcrumb my-4" style="background-color: transparent;">
+        <li style="font-size: xx-large;">My Runs</li>
+      </ol>
+      <table class="table">
+        <thead class="thead-inverse">
         <tr>
           <th>Date</th>
           <th>Distance (km)</th>
@@ -21,14 +25,15 @@
       <tbody>
         {% for log in logs %}
           <tr>
-            <td>{{ log.date }}</td>
-            <td>{{ log.distance }}</td>
-            <td>{{ log.time }}</td>
-            {% calculate_total_calories log.distance log.time log.weight as calories %}
-              <td>{{ calories|floatformat:"0" }}</td>
+              <td class="align-middle">{{ log.date }}</td>
+              <td class="align-middle">{{ log.distance }}</td>
+              <td class="align-middle">{{ log.time }}</td>
+              {% calculate_total_calories log.distance log.time log.weight as calories %}
+              <td class="align-middle">{{ calories|floatformat:"0" }}</td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
+    </div>
   </body>
 </html>
