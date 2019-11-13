@@ -3,7 +3,7 @@ from .models import Log
 
 
 def home(request):
-    logs = Log.objects.all()
+    logs = Log.objects.all().order_by('date')
     return render(request, 'home.html', {'logs': logs})
 
 
@@ -14,7 +14,7 @@ def new_log(request):
         time = request.POST['time']
         weight = request.POST['weight']
 
-        log = Log.objects.create(
+        Log.objects.create(
             date=date,
             distance=distance,
             time=time,
