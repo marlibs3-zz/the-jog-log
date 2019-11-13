@@ -2,6 +2,8 @@
 
 This simple Django web-app allows you to keep a record of your runs. It also calculates the calories that you burned during said exercise.
 
+![The Jog Log](https://raw.githubusercontent.com/marlibs3/the-jog-log/master/preview.jpg)
+
 ### To run the local dev server:
 - Clone the repo
 - Run `docker build -t jogger-dev-server`
