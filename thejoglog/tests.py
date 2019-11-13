@@ -3,6 +3,7 @@ from django.urls import resolve
 from django.test import TestCase
 from .views import home
 from .models import Log
+from .templatetags.calculations import calculate_total_calories
 
 
 class HomeTests(TestCase):
@@ -35,4 +36,9 @@ class NewLogTests(TestCase):
         }
         self.client.post(url, data)
         self.assertTrue(Log.objects.exists())
+
+class CalculationTests(TestCase):
+    def test_calculate_total_calories(self):
+        calories = calculate_total_calories(4.66, 28, 80)
+        assert round(calories) == 368
 

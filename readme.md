@@ -16,6 +16,7 @@ This simple Django web-app allows you to keep a record of your runs. It also cal
 
 ### If I had more time I would have...
 - Tidied up / commented the code
+- Added unhappy path testing
 - Added validation for the form, probably by redoing the form using the Forms API and tested it
 - Added error handling and a 404 page
 - Used proper CSS instead of hand-cranked bootstrap-y magic
